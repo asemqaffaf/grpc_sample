@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package sample;
+
+service ServiceSample{
+    rpc testFunction (Request) returns (Response) {}
+}
+
+
+
+// The request message containing the key
+message Request {
+    string key = 1;
+  }
+  
+  // The response message containing the value associated with the key
+  message Response {
+    string value = 1;
+    string callbackFunction = 2;
+  }
+  
